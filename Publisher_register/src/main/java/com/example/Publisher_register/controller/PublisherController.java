@@ -17,7 +17,7 @@ public class PublisherController {
     private PublisherRepository publisherRepository;
 
     @PostMapping("/create")
-    public Publisher create(@RequestBody Publisher publisher) {
+    public Publisher create(@RequestBody Publisher publisher){
         return publisherRepository.save(publisher);
     }
 
@@ -32,14 +32,12 @@ public class PublisherController {
     }
 
     @PutMapping("/update")
-    public Publisher update(@RequestBody Publisher publisher) {
+    public Publisher update(@RequestBody Publisher publisher){
         return publisherRepository.save(publisher);
     }
 
     @DeleteMapping("/delete/{id}")
-    public void deleteById(@PathVariable String id) {
+    public void deleteById(@PathVariable String id){
         publisherRepository.deleteById(id);
     }
-
-
 }
